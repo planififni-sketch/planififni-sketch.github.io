@@ -1,0 +1,28 @@
+name: Verify multilingual site
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site-i18n.js'
+      - 'tests/site-i18n.test.cjs'
+      - 'index.html'
+      - 'privacy.html'
+      - 'terms.html'
+      - 'account-deletion.html'
+      - '.github/workflows/site-i18n-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  i18n:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript syntax check
+        run: node --check site-i18n.js
+      - name: Locale routing and page smoke tests
+        run: node --test tests/site-i18n.test.cjs
