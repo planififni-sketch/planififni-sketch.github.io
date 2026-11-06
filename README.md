@@ -15,3 +15,7 @@ Static website for the Camping Morocco Android app.
 **AdMob**: no `app-ads.txt` is published yet because no real AdMob publisher line has been supplied. Check the official app-ads.txt host/subdomain crawler behavior and create the file only after registering the app and confirming a verified developer website.
 
 No SDKs, cookies, analytics, ad requests or sign-in features are included on this static website.
+
+Official Google Play listing: https://play.google.com/store/apps/details?id=ma.campingmorocco.app
+Support email: bisapp.ink@outlook.com
+The official Camping Morocco app logo is served from `/assets/camping-morocco-logo.webp` across the website.
