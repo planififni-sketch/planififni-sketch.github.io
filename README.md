@@ -19,3 +19,7 @@ No SDKs, cookies, analytics, ad requests or sign-in features are included on thi
 Official Google Play listing: https://play.google.com/store/apps/details?id=ma.campingmorocco.app
 Support email: bisapp.ink@outlook.com
 The official Camping Morocco app logo is served from `/assets/camping-morocco-logo.webp` across the website.
+
+## Five-language localization (2026-11-06)
+
+The shared `site-i18n.js` provides complete translated Home, Privacy, Terms and Account Deletion content in Arabic (`ar`), French (`fr`), German (`de`) and Spanish (`es`) in addition to the English fallback. The site selects the visitor's first supported browser/system-preferred language via `navigator.languages`, and uses English if none matches. Every page has an accessible language selector (including Auto/system). Manual preference is saved in browser `localStorage` when available, and shareable `?lang=ar|fr|de|es|en` links override that setting. Arabic sets HTML `lang=ar` and `dir=rtl` and uses RTL-specific CSS. Navigation persists the selection across internal legal pages. JavaScript-disabled browsers retain the original English HTML, so OAuth crawlers and Search Console verification see meaningful content. No account or application data is transmitted by localization. Keep the Google Search Console HTML verification file in place.
